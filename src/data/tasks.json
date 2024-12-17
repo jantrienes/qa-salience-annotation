@@ -1,6 +1,5 @@
 [
     {
-        "instructions": "Order the questions by their importance for appearing in a summary.",
         "dataset": "pubmed-sample",
         "doc_id": 38221859,
         "items": [
@@ -112,7 +111,6 @@
         ]
     },
     {
-        "instructions": "Order the questions by their importance for appearing in a summary.",
         "dataset": "cs-cl",
         "doc_id": "2410.11996v1",
         "items": [
@@ -189,7 +187,6 @@
         ]
     },
     {
-        "instructions": "Order the questions by their importance for appearing in a summary.",
         "dataset": "astro-ph",
         "doc_id": "0903.0636v1",
         "items": [
@@ -261,7 +258,6 @@
         ]
     },
     {
-        "instructions": "Order the questions by their importance for appearing in a summary.",
         "dataset": "qmsum-generic",
         "doc_id": "Product-train-74",
         "items": [
