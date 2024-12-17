@@ -1,0 +1,320 @@
+[
+    {
+        "instructions": "Order the questions by their importance for appearing in a summary.",
+        "dataset": "pubmed-sample",
+        "doc_id": 38221859,
+        "items": [
+            {
+                "id": 11,
+                "title": "What was the study design or setting of the trial?",
+                "body": "This multicentre, randomized, double-blind, phase 3 study."
+            },
+            {
+                "id": 6,
+                "title": "What are the specific biological markers influenced by the intervention?",
+                "body": "Glycated haemoglobin (HbA1c), fasting plasma glucose, and postprandial plasma glucose levels."
+            },
+            {
+                "id": 1,
+                "title": "What is the main focus of the study?",
+                "body": "Assessing the efficacy and safety of prusogliptin (DBPR108) in individuals with type 2 diabetes."
+            },
+            {
+                "id": 29,
+                "title": "What is the main outcome or effect observed?",
+                "body": "The main outcome observed is the efficacy of DBPR108 in reducing glycated haemoglobin (HbA1c) levels, with DBPR108 showing superiority to placebo and non-inferiority to sitagliptin in terms of glycaemic control over 24 weeks and sustained efficacy up to 52 weeks."
+            },
+            {
+                "id": 18,
+                "title": "What is the participant demographic or characteristics in the study?",
+                "body": "The participants were adult patients with type 2 diabetes, with a mean age of 54.3 years, 58% were men, and the median duration of type 2 diabetes was 0.38 years."
+            },
+            {
+                "id": 28,
+                "title": "What are secondary outcomes noted in the study?",
+                "body": "The study notes the reduction in fasting and postprandial plasma glucose levels as a result of DBPR108 treatment, and it also notes that DBPR108 had little effect on body weight."
+            },
+            {
+                "id": 19,
+                "title": "How were the participants or subjects of the study selected and divided?",
+                "body": "In this multicentre, randomized, double-blind, phase 3 study, adult patients with type 2 diabetes were randomly assigned to receive either DBPR108 100\u2009mg, sitagliptin 100\u2009mg, or placebo once daily. A total of 766 patients were enrolled and divided into three groups: DBPR108 100\u2009mg (n\u2009=\u2009462), sitagliptin 100\u2009mg (n\u2009=\u2009152), or placebo (n\u2009=\u2009152)."
+            },
+            {
+                "id": 8,
+                "title": "What were the comparative results between intervention and control groups?",
+                "body": "The comparative results between intervention and control groups were as follows:\n- DBPR108 was superior to placebo (mean treatment difference -0.61% (95% CI -0.77% to -0.44%) at week 24).\n- DBPR108 was non-inferior to sitagliptin (mean treatment difference -0.03% (95% CI -0.19% to 0.13%) at week 24).\n- At week 52, the mean HbA1c changes from baseline for DBPR108, sitagliptin, and placebo were -0.50%, -0.46%, and -0.41%, respectively."
+            },
+            {
+                "id": 36,
+                "title": "What was the main intervention used in the study?",
+                "body": "DBPR108 100\u2009mg, sitagliptin 100\u2009mg, and placebo were given once daily to the patients."
+            },
+            {
+                "id": 31,
+                "title": "What are the significant benefits of the intervention?",
+                "body": "The intervention (DBPR108) significantly reduced glycated haemoglobin (HbA1c) levels, fasting and postprandial plasma glucose levels, and had little effect on body weight."
+            },
+            {
+                "id": 10,
+                "title": "Which patient population is the study concerned with?",
+                "body": "Adult patients with type 2 diabetes who had not been using glucose-lowering agents regularly for the 8\u2009weeks before the screening period."
+            },
+            {
+                "id": 14,
+                "title": "What implications or future recommendations did the study suggest based on its findings?",
+                "body": "The study suggests that DBPR108 can be used as an effective treatment option for patients with type 2 diabetes, with potential superiority over placebo and non-inferiority to sitagliptin, and its efficacy in controlling glycemic levels can be sustained for up to 52 weeks."
+            },
+            {
+                "id": 34,
+                "title": "What specific treatments were compared in the study?",
+                "body": "DBPR108 100 mg, sitagliptin 100 mg, and placebo."
+            },
+            {
+                "id": 3,
+                "title": "What are the detailed findings regarding adverse events or side effects?",
+                "body": "The incidence of adverse events was comparable across all three groups, with no specific details provided about the nature of these events."
+            },
+            {
+                "id": 26,
+                "title": "What significant statistical results are reported?",
+                "body": "The study reported the following significant statistical results:\n- Mean treatment difference between DBPR108 and placebo was -0.61% (95% CI -0.77% to -0.44%).\n- The 95% CI for the mean treatment difference between DBPR108 and sitagliptin was -0.03% (95% CI -0.19% to 0.13%).\n- DBPR108 significantly reduced fasting and postprandial plasma glucose levels.\n- The incidence of adverse events was comparable across all three groups."
+            },
+            {
+                "id": 9,
+                "title": "What condition is being addressed in the study?",
+                "body": "Type 2 diabetes."
+            },
+            {
+                "id": 20,
+                "title": "What were the methods used in the study?",
+                "body": "In this multicentre, randomized, double-blind, phase 3 study, adult patients with type 2 diabetes were randomly assigned to receive either DBPR108 100\u2009mg, sitagliptin 100\u2009mg, or placebo once daily during the initial 24-week double-blind treatment period, followed by a 28-week open-label extension period during which all patients received DBPR108 100\u2009mg once daily."
+            },
+            {
+                "id": 2,
+                "title": "What limitations or considerations are noted by the study?",
+                "body": "No limitations or considerations are explicitly mentioned in the study, but the study notes the incidence of adverse events was \"comparable across all three groups,\" suggesting that the primary focus was on the efficacy of the medication rather than the potential limitations or considerations."
+            },
+            {
+                "id": 0,
+                "title": "How long was the duration of the intervention or study?",
+                "body": "The study had two parts: an initial 24-week double-blind treatment period and a 28-week open-label extension period, totaling 52 weeks."
+            },
+            {
+                "id": 4,
+                "title": "What are the main findings regarding efficacy and safety?",
+                "body": "The main findings regarding efficacy are that DBPR108 showed superiority to placebo and non-inferiority to sitagliptin in terms of glycaemic control over the initial 24\u2009weeks and its efficacy was sustained for up to 52\u2009weeks. It also reduced fasting and postprandial plasma glucose levels and had little effect on body weight. The main finding regarding safety is that the incidence of adverse events was comparable across all three groups."
+            },
+            {
+                "id": 23,
+                "title": "What specific metrics or outcomes were measured?",
+                "body": "The specific metrics or outcomes measured included the mean change in glycated haemoglobin (HbA1c) levels, mean treatment difference between groups, fasting and postprandial plasma glucose levels, changes in body weight, and the incidence of adverse events."
+            }
+        ]
+    },
+    {
+        "instructions": "Order the questions by their importance for appearing in a summary.",
+        "dataset": "cs-cl",
+        "doc_id": "2410.11996v1",
+        "items": [
+            {
+                "id": 16,
+                "title": "What are the broader implications or applications of the research findings?",
+                "body": "The research aims to provide a more comprehensive evaluation of Long-Context Language Models' (LCLMs) holistic reasoning capabilities by addressing limitations of existing benchmarks, which primarily focus on localized tasks. The findings can potentially inform the development of more robust and scalable LCLMs that can synthesize and integrate vast amounts of information across lengthy documents."
+            },
+            {
+                "id": 20,
+                "title": "Which previous works or studies are referenced?",
+                "body": "Thorne et al. (2021), Trappolini et al. (2023), Kamradt (2023), Lee et al. (2024), Hsieh et al. (2024), Kuratov et al. (2024), Karpinska et al. (2024), Laban et al. (2024), Levy, Jacoby, and Goldberg (2024), Zhang et al. (2024), En.QA in `\\infty\\text{BENCH}`, Lewis et al. (2020), Z. Li et al. (2024), and Tan Yu, Xu, and Akkiraju (2024)."
+            },
+            {
+                "id": 25,
+                "title": "What is a prominent method mentioned for enhancing model effectiveness?",
+                "body": "Retrieval-Augmented Generation (RAG) is a prominent method mentioned for enhancing model effectiveness, combining retrieval-based methods and generative language models to enhance the generation of accurate and contextually relevant responses."
+            },
+            {
+                "id": 15,
+                "title": "What main topic is the document addressing?",
+                "body": "The main topic is the evaluation and improvement of Long-Context Language Models (LCLMs) for tasks requiring understanding and processing extended contexts, including the design of a new benchmark to assess their holistic reasoning capabilities."
+            },
+            {
+                "id": 27,
+                "title": "What are the main methods or techniques evaluated in the study?",
+                "body": "Long-context language models (LCLMs), Retrieval-Augmented Generation (RAG), and neural databases are the main methods or techniques evaluated in the study."
+            },
+            {
+                "id": 8,
+                "title": "How does the study relate to previous research in the field?",
+                "body": "The study aims to address limitations of previous benchmarks and existing research, including those of Thorne et al. (2021) and Trappolini et al. (2023), by providing a more comprehensive evaluation of LCLMs' holistic reasoning capabilities and tackling the challenges of long-context understanding."
+            },
+            {
+                "id": 23,
+                "title": "What are the main approaches or techniques discussed in the document?",
+                "body": "The main approaches or techniques discussed are Neural Databases, Long-context Language Model Benchmarks, and Retrieval-Augmented Generation (RAG)."
+            },
+            {
+                "id": 5,
+                "title": "Which benchmarks are considered in the study?",
+                "body": "The following benchmarks are mentioned in the study: En.QA in $\\infty$BENCH, and several unnamed benchmarks introduced by Kamradt (2023), Lee et al. (2024), Hsieh et al. (2024), Kuratov et al. (2024), Karpinska et al. (2024), Laban et al. (2024), Levy, Jacoby, and Goldberg (2024), Zhang et al. (2024)."
+            },
+            {
+                "id": 30,
+                "title": "What improvements or contributions do the proposed methods make?",
+                "body": "The proposed methods aim to evaluate LCLMs' holistic reasoning capabilities by providing a more comprehensive evaluation of their ability to synthesize and integrate vast amounts of information distributed across extended contexts in an automated and scalable manner. They also aim to address the limitations of existing benchmarks, which predominantly focus on localized tasks or summarization, and provide a more comprehensive evaluation of models' abilities to handle complex reasoning tasks over vast amounts of information in lengthy documents."
+            },
+            {
+                "id": 19,
+                "title": "What future research directions does the document propose?",
+                "body": "The document proposes future research directions that include investigating how LCLMs synthesize and integrate vast amounts of information distributed across extended contexts in an automated and scalable manner. This is to be achieved by designing a corpus generation framework that can systematically vary the complexity and distribution of information."
+            },
+            {
+                "id": 12,
+                "title": "What recent advancements or innovations are highlighted in the document?",
+                "body": "Thorne et al. (2021) proposed a neural database architecture, Trappolini et al. (2023) extended neural databases to multimodal data, and several studies (Zhang et al., Lee et al., Hsieh et al., Kuratov et al., Karpinska et al., Laban et al., Levy, Jacoby, and Goldberg, and Zhang et al.) introduced benchmarks to evaluate LCLMs on tasks requiring understanding and processing extended contexts."
+            },
+            {
+                "id": 14,
+                "title": "What challenge or gap is identified in the research?",
+                "body": "The challenge or gap identified in the research is that existing benchmarks for long-context language models (LCLMs) predominantly focus on localized tasks or summarization, do not fully assess models' abilities to handle complex reasoning tasks over vast amounts of information, and are either prohibitively expensive to create or prone to annotation errors."
+            },
+            {
+                "id": 21,
+                "title": "What significant results or conclusions does the document draw?",
+                "body": "The document draws the following significant conclusions:\n- Current neural database architectures and benchmarks have limitations in addressing long-context understanding and are not sufficient for comprehensive evaluation.\n- Existing benchmarks for Long Contextual Language Models (LCLMs) focus on localized tasks and summarization, but do not fully assess models' abilities to handle complex reasoning tasks over vast amounts of information.\n- The creation of high-quality, manually annotated datasets for LCLMs is prohibitively costly and prone to annotation errors.\n- The current analysis of Retrieval-Augmented Generation (RAG) is not applicable to our task, which requires filtering information based on complex constraints and aggregating a large amount of information."
+            },
+            {
+                "id": 11,
+                "title": "What are the new approaches or methods proposed to address the challenges?",
+                "body": "A corpus generation framework that can systematically vary the complexity and distribution of information is proposed to address the limitations of existing benchmarks and provide a more comprehensive evaluation of LCLMs' holistic reasoning capabilities."
+            }
+        ]
+    },
+    {
+        "instructions": "Order the questions by their importance for appearing in a summary.",
+        "dataset": "astro-ph",
+        "doc_id": "0903.0636v1",
+        "items": [
+            {
+                "id": 8,
+                "title": "What methodology or techniques are employed in the study?",
+                "body": "The study employs the use of infrared observations (e.g., IRAC wavelengths), data analysis of the spectral energy distribution (SED), and theoretical simulations (e.g., evolutionary tracks presented in (**bar02?**)) to understand the evolution of low-mass star-forming objects, specifically the VeLLO sources like L1521F IRS. Additionally, the study uses observations of cloud core masses, total infrared luminosity, and accretion rates to infer the evolutionary status of the sources."
+            },
+            {
+                "id": 0,
+                "title": "What is the main focus of the study?",
+                "body": "The main focus of the study is the evolutionary status of the VeLLO source L1521F IRS, particularly where it fits in the evolutionary scheme of low-mass star-formation."
+            },
+            {
+                "id": 2,
+                "title": "How do the findings affect the understanding of astronomical systems?",
+                "body": "The findings suggest that the evolutionary stage of low-mass star formation is more complex than initially thought, with objects like L1521F IRS being younger or comparable in age to class 0 sources, despite having lower luminosity. This challenges existing theoretical simulations of the first protostellar core phase, which predict higher accretion luminosity. The study also implies that the final mass of a protostar may not be determined solely by the initial mass reservoir, but also by the rate of accretion."
+            },
+            {
+                "id": 6,
+                "title": "What comparisons are made within the study?",
+                "body": "The study compares L1521F IRS (a VeLLO source) to class 0 sources, specifically class 0 L1527 IRS, in terms of their luminosity, cloud core masses, and evolutionary status. It also compares the VeLLO L1521F IRS to other VeLLO sources, such as IRAM 04191+1522 and L1551NE, to determine if they represent a short-lived phase compared to class 0 objects."
+            },
+            {
+                "id": 3,
+                "title": "What specific challenges or limitations does the study address or identify?",
+                "body": "The study identifies challenges and limitations in existing theoretical simulations of the first protostellar core phase, as they produce little or no emission shortward of 70 \u03bcm, whereas L1521F IRS is well detected at all IRAC wavelengths, and these simulations also produce accretion luminosity much higher than the luminosity of L1521F IRS. Additionally, the study mentions that the theoretical evolutionary tracks are highly uncertain at young ages, and that the assumption of constant mass infall rate may not apply, which could lead to an overinterpretation of the age of L1521F IRS."
+            },
+            {
+                "id": 10,
+                "title": "What specific phenomena or processes are being investigated in the study?",
+                "body": "The study investigates the evolutionary status of L1521F IRS, specifically its accretion phase, the embedded phase, and the outflow of the source, as well as the possibility of it being a VeLLO (Very Low Luminosity Object) source. It also investigates the mass infall rates, the mass reservoir of the cloud core, and the accretion luminosity of the source. Additionally, the study examines the theoretical evolutionary tracks of protostellar core phases and the formation of the second (hydrostatic) core."
+            },
+            {
+                "id": 18,
+                "title": "How do the findings relate to existing models or theories?",
+                "body": "The findings do not match existing theoretical simulations of the first protostellar core phase, as these simulations produce little or no emission shortward of 70 \u03bcm and high accretion luminosity, whereas L1521F IRS is well detected at all IRAC wavelengths and has low accretion luminosity. However, the source might fit the next phase of the second (hydrostatic) core formation, but only if the infall rate is low or variable. Theoretical evolutionary tracks suggest that 0.1 M\u2299 is the maximum possible mass for L < 0.1 L\u2299 if the age is less than 1 Myr, indicating that the current mass of L1521F IRS is likely to be substellar."
+            },
+            {
+                "id": 14,
+                "title": "What detailed evidence or data is used to support the study's claims?",
+                "body": "The study uses the following detailed evidence or data to support its claims:\n- The low-luminosity of L1521F IRS, which is roughly 50 times smaller than that of L1527.\n- The cloud core masses of L1521F IRS and L1527 are similar, but the total infrared luminosity of L1521F IRS is much lower.\n- The morphology and luminosity of L1521F IRS suggest that it could be younger or comparable in age to the class 0 L1527.\n- The similar mass reservoir of the cloud cores in L1521F IRS suggests that it may eventually accrete enough mass to become a full-fledged star.\n- The source's SED, which is a steeply rising SED, similar to class 0 sources.\n- The presence of outflows in L1521F IRS.\n- Accretion luminosity calculations, which suggest that the source has a low central mass.\n- Comparison with theoretical simulations of the first protostellar core phase, which are incompatible with the observations of L1521F IRS.\n- Theoretical evolutionary tracks, which suggest that 0.1 M\u2609 is the maximum possible mass for L < 0.1L\u2609 if the age is less than 1 Myr.\n- The source's location inside the cloud core, which suggests that it will likely continue to accrete material from an ample mass reservoir."
+            },
+            {
+                "id": 5,
+                "title": "What are the broader implications or potential applications of the findings?",
+                "body": "The findings of the study on L1521F IRS provide insights into the evolutionary status of very low-luminosity objects (VeLLOs) in the context of low-mass star formation. The study's implications are relevant to understanding the initial conditions of star formation, the role of accretion rates, and the potential for VeLLOs to grow into full-fledged stars. The discovery of VeLLOs in Taurus, with similar numbers to class 0 sources, suggests that they may represent a distinct phase of star formation. The study's findings also raise questions about the potential for variable accretion rates and the possibility that VeLLOs may grow into stars or remain substellar objects."
+            },
+            {
+                "id": 17,
+                "title": "What broader context or field does the study contribute to or address?",
+                "body": "The study contributes to or addresses the field of star formation, specifically the evolutionary status and comparison of Very Low-Luminosity Objects (VeLLOs) with class 0 sources, the first stages of low-mass star formation, and the process of accretion onto protostars."
+            },
+            {
+                "id": 15,
+                "title": "What are the main findings of the study?",
+                "body": "The main findings of the study are: \n- VeLLO sources, such as L1521F IRS, share similarities with class 0 sources but have lower luminosity.\n- The low-luminosity of L1521F IRS suggests it may be younger than L1527 IRS or have a lower central mass.\n- The study suggests that L1521F IRS could be comparable in age to the class 0 L1527, and it may eventually accrete enough mass to become a full-fledged star.\n- The study proposes that the final stellar mass is determined by the available mass reservoir and will approach a relatively constant fraction of the core mass.\n- The study suggests that L1521F IRS might represent the beginning of the second protostellar core phase, and its current mass is likely to be substellar.\n- The study proposes that the differences between VeLLO and class 0 sources can be explained by different accretion rates onto the central protostar."
+            },
+            {
+                "id": 9,
+                "title": "Which future research directions does the study recommend or outline?",
+                "body": "The study suggests that future research should investigate the following directions:\n\n- Improving statistics in Taurus through further surveys, such as the survey results of Dunham et al. (2008), which presented 15 new VeLLO candidates.\n- Examining the possibility of variable infall rates, which could lead to a lower accretion luminosity and make the existing theoretical simulations incompatible with the observations of L1521F IRS.\n- Investigating the effect of lower infall rates in theoretical evolutionary tracks, which could provide more accurate predictions for the mass and age of L1521F IRS.\n- Studying the conditions that could terminate accretion, such as high angular momentum or ejection, which could determine whether L1521F IRS will remain substellar or continue to grow in mass."
+            },
+            {
+                "id": 12,
+                "title": "What specific variables or conditions are crucial in the study's findings?",
+                "body": "The crucial variables or conditions mentioned in the study's findings include:\n1. Luminosity: The study uses a luminosity boundary of $`L_{TIR} = 0.5~L_{\\sun}`$ to distinguish VeLLO sources from class 0 sources.\n2. Accretion rate: The study suggests that the accretion rate may be variable and could be a factor in explaining the differences between L1527 and L1521F IRS.\n3. Mass: The study discusses the mass of the cloud core, which is at least $`5~M_{\\sun}`$, and the mass of the protostar, which is likely to be substellar ($`<0.1~M_{\\sun}`$) if the accretion luminosity is low.\n4. Infall rate: The study mentions that infall rates are likely to be different in various simulations and observations, which affects the accretion luminosity and the evolutionary stage of the object.\n5. Mass reservoir: The study suggests that the final stellar mass is determined by the available mass reservoir, and L1521F IRS may eventually accrete enough mass to become a full-fledged star.\n6. Angular momentum: The study mentions that high angular momentum could be a condition that terminates accretion and prevents L1521F IRS from becoming a star."
+            }
+        ]
+    },
+    {
+        "instructions": "Order the questions by their importance for appearing in a summary.",
+        "dataset": "qmsum-generic",
+        "doc_id": "Product-train-74",
+        "items": [
+            {
+                "id": 15,
+                "title": "What are the identified challenges or concerns discussed?",
+                "body": "The challenges or concerns discussed include:\n\n- The microphone cord not working or being cumbersome (INDUSTRIAL DESIGNER, USER INTERFACE, PROJECT MANAGER)\n- The need for the remote control to be original, trendy, and user-friendly (PROJECT MANAGER)\n- The need to keep the production cost at a maximum of 12.50 Euro (PROJECT MANAGER)\n- Selling at least 4 million units to make a profit (USER INTERFACE)\n- Difficulty in guessing the animal drawn by MARKETING (all team members)\n- The need to consider the user requirements before designing the remote control (INDUSTRIAL DESIGNER, MARKETING)\n- The need to balance between adding features and keeping the remote control simple and user-friendly (MARKETING, PROJECT MANAGER)\n- The desire to design a new remote control rather than partnering with a manufacturer (INDUSTRIAL DESIGNER)"
+            },
+            {
+                "id": 4,
+                "title": "What main topic was discussed in the meeting?",
+                "body": "The main topic of the meeting was the new remote control project, specifically designing a new remote control for a television set, including its functionality, user interface, and market requirements."
+            },
+            {
+                "id": 14,
+                "title": "What detailed strategies or solutions were proposed for the challenges discussed?",
+                "body": "The team discussed several challenges for designing a new remote control, including:\n- Making it original, trendy, and user-friendly\n- Ensuring it has a good balance of functionality and affordability, with a goal of selling it at a price of 25 Euros\n- Providing a browsing function for channels\n- Incorporating common features such as volume and channel controls, teletext, and possibly internet capabilities\n- Leaving out unnecessary features to keep the price low\n- Designing a new remote control rather than collaborating with existing manufacturers\n\nFor future development, the team decided to:\n- Work on a general design for the remote control, keeping it flexible for potential additions of new functions\n- Focus on technical function design\n- Consider user requirements, such as whether the remote control needs internet capabilities or should stay with a basic TV interface\n- Communicate through email and other forms of communication before the next meeting."
+            },
+            {
+                "id": 9,
+                "title": "Who are the participants and their roles discussed in the meeting?",
+                "body": "The participants are Matthew (User Interface), Anna (Marketing), Nanne (Project Manager), and Mael (Industrial Designer). Their roles are User Interface, Marketing, Project Manager, and Industrial Designer, respectively."
+            },
+            {
+                "id": 17,
+                "title": "What were the major outcomes or decisions made during the meeting?",
+                "body": "- The team will work on designing a new remote control for television sets.\n- The remote control should be original, trendy, and user-friendly.\n- The target price of the product is 25 Euros.\n- The production cost must be no more than 12.50 Euros.\n- The team will aim to sell at least 4 million units to make a profit.\n- The remote control should have basic functions such as browsing channels, changing volume, and accessing teletext.\n- The team will work on the technical function design and requirements in the next meeting.\n- The next meeting will be in 30 minutes.\n- The team will be informed via email and other forms of communication about the next steps."
+            },
+            {
+                "id": 2,
+                "title": "What were the main objectives or goals discussed in the meeting?",
+                "body": "The main objectives or goals discussed in the meeting were to introduce the new project of designing a remote control, to understand the roles of each team member, to learn how to use the whiteboard tool, to brainstorm and gather ideas for the remote control design, and to set clear goals and expectations for the project."
+            },
+            {
+                "id": 10,
+                "title": "Which aspects of the main topic were covered in the discussion?",
+                "body": "The main topic was about designing a new remote control for a television set. Aspects covered in the discussion include the user requirements, such as having a user-friendly interface, a browsing function, volume and channel control, and possibly internet functionality. The team also discussed the importance of the remote control being original, trendy, and fitting within a budget of 25 Euros, with a target profit of 50 million Euros."
+            },
+            {
+                "id": 7,
+                "title": "What were the anticipated impacts or implications discussed?",
+                "body": "The anticipated impacts or implications discussed include the need for the new remote control to be original, trendy, user-friendly, and to sell at least four million units to make a profit of 50 million Euros. Additionally, the production cost should be no more than 12.50 Euros, and the selling price is expected to be 25 Euros. The remote control should have the expected functionality of a remote control, including browsing channels, adjusting volume, and changing channels, with the main controls being easy to use and obvious."
+            },
+            {
+                "id": 16,
+                "title": "What potential future steps or actions were planned in the meeting?",
+                "body": "- The team will work on technical function design\n- They will create a general design, keeping it flexible for adding functions\n- The team will determine if the remote control needs internet functionality or stays with basic TV interface\n- They will discuss and decide on the buttons that will be on the remote control in the next meeting\n- The next meeting will be in 30 minutes"
+            },
+            {
+                "id": 3,
+                "title": "What collaborative efforts or partnerships were discussed?",
+                "body": "The team discussed the possibility of partnering with TV manufacturers to sell their product, and Matthew suggested that they could sell their product together with the TV manufacturers' product."
+            }
+        ]
+    }
+]
