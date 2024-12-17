@@ -24,7 +24,7 @@ const isComplete = computed(() => {
   );
 });
 
-const showBody = ref(false);
+const showBody = ref(true);
 function toggleBody() {
   showBody.value = !showBody.value;
 }
