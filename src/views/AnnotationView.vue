@@ -36,9 +36,9 @@ const genre = function () {
     case "qmsum-generic":
       return "a meeting transcript (e.g., research group meetings)";
     case "cs-cl":
-      return "a paper on Natural Language Processing (NLP)";
+      return "the related work section of an Natural Language Processing (NLP) paper";
     case "astro-ph":
-      return "a paper on astro physics";
+      return "the discussion section of an astro physics paper";
   }
 };
 
