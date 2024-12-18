@@ -5,7 +5,7 @@ import { useRoute } from "vue-router";
 import { shuffle } from "@/utils";
 import NotificationComponent from "./NotificationComponent.vue";
 
-// Examplhttp://localhost:5173/?dataset=cs-cl&annotator=foo
+// Example: http://localhost:5173/?dataset=cs-cl&annotator=foo
 const route = useRoute();
 const dataset = route.query.dataset;
 const annotator = route.query.annotator;
@@ -90,7 +90,7 @@ function submitSurvey() {
 
     <div class="row">
       <h2>Questions</h2>
-      <button @click="toggleBody" class="button-gray">
+      <button @click="toggleBody">
         {{ showBody ? "Hide examples" : "Show examples" }}
       </button>
     </div>
@@ -145,12 +145,12 @@ textarea {
   max-width: 100%;
   min-height: 150px;
   padding: 12px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 6px;
-  background-color: #f9f9f9;
+  background-color: var(--color-background-mute);
   font-family: "Arial", sans-serif;
   font-size: 16px;
-  color: #333;
+  color: var(--color-text);
   outline: none;
   transition:
     border-color 0.3s,
@@ -160,7 +160,6 @@ textarea {
 textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  background-color: #fff;
 }
 
 .survey {
@@ -171,7 +170,7 @@ textarea:focus {
 
 .introduction {
   margin-bottom: 2em;
-  background-color: rgb(228, 228, 228);
+  background-color: var(--color-background-mute);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -228,11 +227,6 @@ button {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-
-.button-gray {
-  background-color: #ccc;
-  color: white;
 }
 
 .row {
