@@ -1,27 +1,38 @@
 <script setup>
-import { ref, computed } from "vue";
-import tasks from "@/data/tasks.json";
+import { ref, computed, onMounted } from "vue";
+import { useSurveyStore } from "@/stores/SurveyStore.js";
 import { useRoute } from "vue-router";
 import { shuffle } from "@/utils";
 import NotificationComponent from "./NotificationComponent.vue";
+import tasks from "@/data/tasks.json";
 
-// Example: http://localhost:5173/?dataset=cs-cl&annotator=foo
 const route = useRoute();
+const store = useSurveyStore();
+
 const dataset = route.query.dataset;
 const annotator = route.query.annotator;
 
-const task = tasks.find((task) => {
-  return task.dataset == dataset;
+onMounted(() => {
+  // Set dataset+annotator to compute storage key
+  store.dataset = dataset;
+  store.annotator = annotator;
+
+  // Load data from local storage
+  store.loadFromLocalStorage();
+
+  // Initialize raw data if not already set
+  if (!store.items.length) {
+    const task = tasks.find((task) => task.dataset === dataset);
+    store.items = shuffle(task.items.slice(), annotator);
+    store.responses = Array(store.items.length).fill(null);
+    store.rationales = Array(store.items.length).fill("");
+  }
 });
-const items = ref(shuffle(task.items.slice(), annotator));
-const responses = ref(Array(items.value.length).fill(null));
-const rationales = ref(Array(items.value.length).fill(""));
-const comments = ref("");
 
 const isComplete = computed(() => {
   return (
-    responses.value.length === items.value.length &&
-    responses.value.every((r) => r)
+    store.responses.length === store.items.length &&
+    store.responses.every((r) => r !== null)
   );
 });
 
@@ -32,14 +43,14 @@ function toggleBody() {
 
 const responseData = computed(() => {
   return {
-    dataset: dataset,
-    annotator: annotator,
-    comments: comments.value,
-    items: items.value.map((item, index) => ({
+    dataset: store.dataset,
+    annotator: store.annotator,
+    comments: store.comments,
+    items: store.items.map((item, index) => ({
       id: item.id,
       question: item.title,
-      rating: responses.value[index],
-      rationale: rationales.value[index],
+      rating: store.responses[index],
+      rationale: store.rationales[index],
     })),
   };
 });
@@ -55,7 +66,7 @@ function submitSurvey() {
   }
 }
 
-const genre = function () {
+function genre() {
   switch (dataset) {
     case "pubmed-sample":
       return 'Imagine you are asked to <span style="font-weight: bold;">summarize a paper describing the results of a randomized controlled trial (RCT)</span> for a typical reader in this genre.';
@@ -66,7 +77,7 @@ const genre = function () {
     case "astro-ph":
       return 'Imagine you are asked to <span style="font-weight: bold;">summarize the discussion section of an astro-physics paper</span> for a typical reader in this genre.';
   }
-};
+}
 </script>
 
 <template>
@@ -110,7 +121,11 @@ const genre = function () {
       </button>
     </div>
 
-    <div v-for="(item, index) in items" :key="index" class="item-container">
+    <div
+      v-for="(item, index) in store.items"
+      :key="index"
+      class="item-container"
+    >
       <div class="item-description">
         <p class="item-title">{{ item.title }}</p>
         <p v-if="showBody" class="item-body">{{ item.body }}</p>
@@ -122,20 +137,20 @@ const genre = function () {
             type="radio"
             :name="'question-' + index"
             :value="n"
-            v-model="responses[index]"
+            v-model="store.responses[index]"
           />
           {{ n }}
         </label>
         <textarea
           style="margin-left: 1.5em"
-          v-model="rationales[index]"
+          v-model="store.rationales[index]"
           placeholder="Rationale"
         ></textarea>
       </div>
     </div>
 
     <textarea
-      v-model="comments"
+      v-model="store.comments"
       name="Text1"
       placeholder="Any comments (optional)..."
     ></textarea>
