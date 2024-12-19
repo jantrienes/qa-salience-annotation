@@ -15,6 +15,7 @@ const task = tasks.find((task) => {
 });
 const items = ref(shuffle(task.items.slice(), annotator));
 const responses = ref(Array(items.value.length).fill(null));
+const rationales = ref(Array(items.value.length).fill(""));
 const comments = ref("");
 
 const isComplete = computed(() => {
@@ -24,23 +25,10 @@ const isComplete = computed(() => {
   );
 });
 
-const showBody = ref(true);
+const showBody = ref(false);
 function toggleBody() {
   showBody.value = !showBody.value;
 }
-
-const genre = function () {
-  switch (dataset) {
-    case "pubmed-sample":
-      return "a paper describing the results of a randomized controlled trial (RCT)";
-    case "qmsum-generic":
-      return "a meeting transcript (e.g., research group meetings)";
-    case "cs-cl":
-      return "the related work section of an Natural Language Processing (NLP) paper";
-    case "astro-ph":
-      return "the discussion section of an astro physics paper";
-  }
-};
 
 const responseData = computed(() => {
   return {
@@ -51,6 +39,7 @@ const responseData = computed(() => {
       id: item.id,
       question: item.title,
       rating: responses.value[index],
+      rationale: rationales.value[index],
     })),
   };
 });
@@ -65,6 +54,19 @@ function submitSurvey() {
     console.log(err);
   }
 }
+
+const genre = function () {
+  switch (dataset) {
+    case "pubmed-sample":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a paper describing the results of a randomized controlled trial (RCT)</span> for a typical reader in this genre.';
+    case "qmsum-generic":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a meeting transcript (e.g., research group meetings)</span> for a typical reader in this genre.';
+    case "cs-cl":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the related work section of an Natural Language Processing (NLP) paper</span> for a typical reader in this genre.';
+    case "astro-ph":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the discussion section of an astro-physics paper</span> for a typical reader in this genre.';
+  }
+};
 </script>
 
 <template>
@@ -72,19 +74,32 @@ function submitSurvey() {
     <h1>Question Salience in Text Summarization</h1>
     <div class="introduction">
       <p>
-        <span style="font-weight: bold">Task.</span> Imagine you are asked to
-        summarize {{ genre() }} in about 200 words for a typical reader in this
-        genre. What are some key questions you want the summary to answer? Here,
-        your task is to rate the (relative) importance of a list of questions
-        that could be answered in the summary.
+        <span style="font-weight: bold">Task.</span>
+        <span v-html="genre()" /> What are some key questions you want the
+        summary to answer? Here, your task is to rate the (relative) importance
+        of a list of questions that could be answered in the summary.
       </p>
-      <ul>
-        <li>1 = Least important to be answered in the summary.</li>
-        <li>10 = Most important to be answered in the summary.</li>
-      </ul>
-      <p>
-        After completing the ratings, please submit the generated response.
-        Thank you for participating!
+      <p style="margin-top: 0.5em">
+        <span style="font-weight: bold">Rating scale.</span>
+      </p>
+      <ol>
+        <li>
+          Least important; I would exclude this information from a summary.
+        </li>
+        <li>
+          Low importance; I would include this information if there is room.
+        </li>
+        <li>Medium importance; I would probably include this information.</li>
+        <li>High importance; I would definitely include this information.</li>
+        <li>
+          Most important; One of the first questions to be answered in the
+          summary.
+        </li>
+      </ol>
+      <p style="margin-top: 0.5em">
+        <span style="font-weight: bold">Submission.</span> After completing the
+        ratings, please submit the generated data (json). Thank you for
+        participating!
       </p>
     </div>
 
@@ -102,7 +117,7 @@ function submitSurvey() {
       </div>
 
       <div class="item-rating">
-        <label v-for="n in 10" :key="n">
+        <label v-for="n in 5" :key="n">
           <input
             type="radio"
             :name="'question-' + index"
@@ -111,6 +126,11 @@ function submitSurvey() {
           />
           {{ n }}
         </label>
+        <textarea
+          style="margin-left: 1.5em"
+          v-model="rationales[index]"
+          placeholder="Rationale"
+        ></textarea>
       </div>
     </div>
 
@@ -120,22 +140,26 @@ function submitSurvey() {
       placeholder="Any comments (optional)..."
     ></textarea>
 
-    <div v-if="isComplete">
-      <div class="row">
-        <div>
-          <h2>Response Data</h2>
-          Thank you for participating! Please share the following data with us.
-        </div>
-
-        <div>
-          <button @click="submitSurvey" :disabled="!isComplete">
-            Copy to clipboard.
-          </button>
-          <NotificationComponent ref="notification" />
-        </div>
+    <div class="row">
+      <div>
+        <h2>Response Data</h2>
+        {{
+          isComplete
+            ? "Thank you for participating! Please share the following data with us."
+            : "Please complete all ratings before submission."
+        }}
       </div>
-      <code class="response">{{ JSON.stringify(responseData, null, 2) }}</code>
+
+      <div>
+        <button @click="submitSurvey" :disabled="!isComplete">
+          Copy to clipboard.
+        </button>
+        <NotificationComponent ref="notification" />
+      </div>
     </div>
+    <code v-if="isComplete" class="response">{{
+      JSON.stringify(responseData, null, 2)
+    }}</code>
   </div>
 </template>
 
@@ -143,7 +167,7 @@ function submitSurvey() {
 textarea {
   width: 100%;
   max-width: 100%;
-  min-height: 150px;
+  min-height: 50px;
   padding: 12px 15px;
   border: 1px solid var(--color-border);
   border-radius: 6px;
@@ -158,6 +182,30 @@ textarea {
 }
 
 textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.item-rating textarea {
+  height: 30px;
+  min-height: 30px;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+  padding: 8px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-background-mute);
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  color: var(--color-text);
+  outline: none;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+input:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
@@ -203,6 +251,8 @@ textarea:focus {
   flex: 30%;
   justify-content: flex-end;
   gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 label {
@@ -225,7 +275,7 @@ button {
 }
 
 button:disabled {
-  background-color: #ccc;
+  background-color: var(--color-background-mute);
   cursor: not-allowed;
 }
 
