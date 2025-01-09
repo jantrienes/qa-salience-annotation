@@ -36,9 +36,22 @@ const isComplete = computed(() => {
   );
 });
 
-const showBody = ref(false);
-function toggleBody() {
-  showBody.value = !showBody.value;
+const showIDs = ref(new Set());
+function toggleBody(i) {
+  showIDs.value.has(i) ? showIDs.value.delete(i) : showIDs.value.add(i);
+}
+
+const showingAll = ref(false);
+function toggleAll() {
+  if (!showingAll.value) {
+    for (var i = 0; i <= store.items.length; i++) {
+      showIDs.value.add(i);
+    }
+  } else {
+    showIDs.value.clear();
+  }
+
+  showingAll.value = !showingAll.value;
 }
 
 const responseData = computed(() => {
@@ -85,7 +98,7 @@ function genre() {
     <h1>Question Salience in Text Summarization</h1>
     <div class="introduction">
       <p>
-        <span style="font-weight: bold">Task.</span>
+        <span style="font-weight: bold">Task. </span>
         <span v-html="genre()" /> What are some key questions you want the
         summary to answer? Here, your task is to rate the (relative) importance
         of a list of questions that could be answered in the summary.
@@ -116,8 +129,8 @@ function genre() {
 
     <div class="row">
       <h2>Questions</h2>
-      <button @click="toggleBody">
-        {{ showBody ? "Hide examples" : "Show examples" }}
+      <button @click="toggleAll">
+        {{ showingAll ? "Hide all examples" : "Show all examples" }}
       </button>
     </div>
 
@@ -127,8 +140,11 @@ function genre() {
       class="item-container"
     >
       <div class="item-description">
-        <p class="item-title">{{ item.title }}</p>
-        <p v-if="showBody" class="item-body">{{ item.body }}</p>
+        <!-- <p class="item-title"><a @click="toggleBody(index)">{{ item.title }}</a></p> -->
+        <p class="item-title" @click="toggleBody(index)">{{ item.title }}</p>
+        <p v-if="showIDs.has(index) | showAll" class="item-body">
+          {{ item.body }}
+        </p>
       </div>
 
       <div class="item-rating">
@@ -202,8 +218,8 @@ textarea:focus {
 }
 
 .item-rating textarea {
-  height: 30px;
-  min-height: 30px;
+  height: 50px;
+  min-height: 50px;
   width: 50%;
   min-width: 50%;
   max-width: 50%;
@@ -226,7 +242,7 @@ input:focus {
 }
 
 .survey {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 20px auto;
   font-family: Arial, sans-serif;
 }
@@ -242,12 +258,12 @@ input:focus {
 .item-container {
   margin-bottom: 20px;
   display: flex;
-  gap: 5em;
+  gap: 3em;
   justify-content: space-between;
 }
 
 .item-description {
-  flex: 70%;
+  flex: 60%;
 }
 
 .item-body {
@@ -263,7 +279,7 @@ input:focus {
 .item-rating {
   display: flex;
   margin-left: auto;
-  flex: 30%;
+  flex: 40%;
   justify-content: flex-end;
   gap: 10px;
   align-items: flex-start;
