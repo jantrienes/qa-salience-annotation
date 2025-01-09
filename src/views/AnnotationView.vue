@@ -218,8 +218,8 @@ textarea:focus {
 }
 
 .item-rating textarea {
-  height: 50px;
-  min-height: 50px;
+  height: 40px;
+  min-height: 40px;
   width: 50%;
   min-width: 50%;
   max-width: 50%;
@@ -258,7 +258,7 @@ input:focus {
 .item-container {
   margin-bottom: 20px;
   display: flex;
-  gap: 3em;
+
   justify-content: space-between;
 }
 
