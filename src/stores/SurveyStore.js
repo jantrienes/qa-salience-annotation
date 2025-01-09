@@ -2,6 +2,7 @@
 import { useRoute } from "vue-router";
 import { defineStore } from 'pinia';
 import { ref, watch } from 'vue';
+import { getUserId } from "@/utils";
 
 export const useSurveyStore = defineStore('survey', () => {
   const route = useRoute();
@@ -13,7 +14,7 @@ export const useSurveyStore = defineStore('survey', () => {
 
   // Function to compute a unique storage key
   const getStorageKey = () => {
-    const annotator = route.query.annotator;
+    const annotator = getUserId();
     const dataset = route.query.dataset;
     if (!annotator || !dataset) return null;
     return `surveyStore-${annotator}-${dataset}-v1`;

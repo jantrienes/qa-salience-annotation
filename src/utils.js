@@ -16,3 +16,15 @@ export function shuffle(array, seed) {
 
     return array;
   }
+
+
+export function getUserId() {
+  let userId = localStorage.getItem('userId');
+
+  if (!userId) {
+    userId = Math.random().toString(36).substring(2, 9);
+    localStorage.setItem('userId', userId);
+  }
+
+  return userId;
+}

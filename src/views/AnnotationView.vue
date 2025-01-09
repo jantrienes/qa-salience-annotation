@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useSurveyStore } from "@/stores/SurveyStore.js";
 import { useRoute } from "vue-router";
-import { shuffle } from "@/utils";
+import { shuffle, getUserId } from "@/utils";
 import NotificationComponent from "./NotificationComponent.vue";
 import tasks from "@/data/tasks.json";
 
@@ -10,7 +10,7 @@ const route = useRoute();
 const store = useSurveyStore();
 
 const dataset = route.query.dataset;
-const annotator = route.query.annotator;
+const annotator = getUserId();
 
 onMounted(() => {
   store.loadFromLocalStorage();
