@@ -76,14 +76,15 @@ function submitSurvey() {
 
 function genre() {
   switch (dataset) {
-    case "pubmed-sample":
-      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a paper describing the results of a randomized controlled trial (RCT)</span> for a typical reader in this genre.';
-    case "qmsum-generic":
-      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a meeting transcript (e.g., research group meetings)</span> for a typical reader in this genre.';
     case "cs-cl":
-      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the related work section of an Natural Language Processing (NLP) paper</span> for a typical reader in this genre.';
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the related work section of an NLP paper</span> for a typical reader in this field. The summary should provide enough context to stand alone, since the reader will <i>only</i> see your summary and no other parts of the paper.';
     case "astro-ph":
-      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the discussion section of an astro-physics paper</span> for a typical reader in this genre.';
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize the discussion section of an astro-physics paper</span> for a typical reader in this field. The summary should provide enough context to stand alone, since the reader will <i>only</i> see your summary and no other parts of the paper.';
+    case "pubmed-sample":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a paper describing the results of a randomized controlled trial (RCT)</span> for a typical reader in this field. The summary should provide enough context to stand alone, since the reader will <i>only</i> see your summary and no other parts of the paper.';
+    case "qmsum-generic":
+      return 'Imagine you are asked to <span style="font-weight: bold;">summarize a meeting transcript (e.g., research group meetings)</span> for a typical reader of these texts. The summary should provide enough context to stand alone, since the reader will <i>only</i> see your summary and not the full meeting transcript.';
+
   }
 }
 </script>
@@ -116,8 +117,11 @@ function genre() {
         </li>
       </ol>
       <p style="margin-top: 0.5em">
+        <span style="font-weight: bold">Duration.</span> Please keep track of how long it took you to do the rating.
+      </p>
+      <p style="margin-top: 0.5em">
         <span style="font-weight: bold">Submission.</span> After completing the
-        ratings, please submit the generated data (json). Thank you for
+        ratings, please submit the generated data (json) through this <a href="https://forms.gle/qU1hhANokLCknGQ47" target="_blank">Google Form</a>. Thank you for
         participating!
       </p>
     </div>
