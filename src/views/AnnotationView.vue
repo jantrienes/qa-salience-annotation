@@ -13,11 +13,6 @@ const dataset = route.query.dataset;
 const annotator = route.query.annotator;
 
 onMounted(() => {
-  // Set dataset+annotator to compute storage key
-  store.dataset = dataset;
-  store.annotator = annotator;
-
-  // Load data from local storage
   store.loadFromLocalStorage();
 
   // Initialize raw data if not already set
@@ -56,8 +51,8 @@ function toggleAll() {
 
 const responseData = computed(() => {
   return {
-    dataset: store.dataset,
-    annotator: store.annotator,
+    dataset: dataset,
+    annotator: annotator,
     comments: store.comments,
     items: store.items.map((item, index) => ({
       id: item.id,
@@ -142,7 +137,7 @@ function genre() {
       <div class="item-description">
         <!-- <p class="item-title"><a @click="toggleBody(index)">{{ item.title }}</a></p> -->
         <p class="item-title" @click="toggleBody(index)">{{ item.title }}</p>
-        <p v-if="showIDs.has(index) | showAll" class="item-body">
+        <p v-if="showIDs.has(index)" class="item-body">
           {{ item.body }}
         </p>
       </div>
