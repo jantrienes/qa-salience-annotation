@@ -1,13 +1,7 @@
 # Question Salience Annotation
 
-A Vue.js server-less interface to let domain experts annotate question salience. 
+A server-less interface written in Vue.js to let domain experts annotate question salience.
 For more information, please refer to this repository: https://github.com/jantrienes/llm-salience
-
-## Demo
-
-https://jantrienes.com/qa-salience-annotation/?dataset=pubmed-sample&annotator=foo
-
-![demo](demo.png)
 
 ## Development
 
@@ -24,3 +18,9 @@ npm run build
 # Lint
 npm run lint
 ```
+
+## Demo
+
+https://jantrienes.com/qa-salience-annotation/?dataset=pubmed-sample&annotator=foo
+
+![demo](demo.png)

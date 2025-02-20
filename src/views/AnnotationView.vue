@@ -121,7 +121,7 @@ function genre() {
       </p>
       <p style="margin-top: 0.5em">
         <span style="font-weight: bold">Submission.</span> After completing the
-        ratings, please submit the generated data (json) through this <a href="https://forms.gle/qU1hhANokLCknGQ47" target="_blank">Google Form</a>. Thank you for
+        ratings, please submit the generated data (json) through this <a href="" target="_blank">Google Form</a>. Thank you for
         participating!
       </p>
     </div>
