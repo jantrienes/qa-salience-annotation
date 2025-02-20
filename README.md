@@ -1,35 +1,26 @@
-# qa-salience-annotation
+# Question Salience Annotation
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue.js server-less interface to let domain experts annotate question salience. 
+For more information, please refer to this repository: https://github.com/jantrienes/llm-salience
 
-## Recommended IDE Setup
+## Demo
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+https://jantrienes.com/qa-salience-annotation/?dataset=pubmed-sample&annotator=foo
 
-## Customize configuration
+![demo](demo.png)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Development
 
 ```sh
+# Project Setup
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Compile and Hot-Reload for Development
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Compile and Minify for Production
 npm run build
-```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+# Lint
 npm run lint
 ```
